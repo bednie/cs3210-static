@@ -1,10 +1,23 @@
 // Define the template using Mustache.js
 const template = `
-    <ul>
-        {{#data}}
-        <li>City: {{name}}, State/Region: {{state}}, Country: {{country}}</li>
-        {{/data}}
-    </ul>
+    <table>
+        <thead>
+            <tr>
+                <th>City</th>
+                <th>State/Region</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#data}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{state}}</td>
+                <td>{{country}}</td>
+            </tr>
+            {{/data}}
+        </tbody>
+    </table>
 `;
 
 // Get the 'output' div element
