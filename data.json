@@ -1,17 +1,27 @@
 [
     {
-        "name": "RR",
-        "age": 35,
-        "city": "San Francisco"
+        "name": "New York City",
+        "state": "New York",
+        "country": "United States"
     },
     {
-        "name": "Ann Ispen",
-        "age": 30,
-        "city": "Los Angeles"
+        "name": "Toronto",
+        "state": "Ontario",
+        "country": "Canada"
     },
     {
-        "name": "Tom Hanks",
-        "age": 22,
-        "city": "Chicago"
+        "name": "Mexico City",
+        "state": "CDMX",
+        "country": "Mexico"
+    },
+    {
+        "name": "London",
+        "state": "England",
+        "country": "United Kingdom"
+    },
+    {
+        "name": "Tokyo",
+        "state": "Tokyo Prefecture",
+        "country": "Japan"
     }
 ]
