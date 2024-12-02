@@ -3,19 +3,18 @@ const template = `
     <table>
         <thead>
             <tr>
-                <th>Flag</th>
                 <th>City</th>
                 <th>State/Region</th>
-                <th>Country</th>
+                <th colspan="2">Country</th>
             </tr>
         </thead>
         <tbody>
             {{#data}}
             <tr>
-                <td class="flag">{{flag}}</td>
                 <td>{{name}}</td>
                 <td>{{state}}</td>
                 <td>{{country}}</td>
+                <td class="flag">{{flag}}</td>
             </tr>
             {{/data}}
         </tbody>
