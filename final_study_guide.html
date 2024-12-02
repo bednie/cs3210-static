@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finals Study Guide Checklist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Study Guide for Finals</h1>
+    <p>Review all textbook topics, labs, worksheets and Homeworks done under these topics</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Topic</th>
+                <th>Completed</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ch 11 Function Wrapping & High Order Functions</td>
+                <td><input type="checkbox" id="ch11"></td>
+                <td><input type="text" id="notes11"></td>
+            </tr>
+            <tr>
+                <td>Ch 12 Lambda Functions, Composing, and Currying</td>
+                <td><input type="checkbox" id="ch12"></td>
+                <td><input type="text" id="notes12"></td>
+            </tr>
+            <tr>
+                <td>Ch 13 Continuation</td>
+                <td><input type="checkbox" id="ch13"></td>
+                <td><input type="text" id="notes13"></td>
+            </tr>
+            <tr>
+                <td>Ch 17,18 Data Abstraction</td>
+                <td><input type="checkbox" id="ch17_18"></td>
+                <td><input type="text" id="notes17_18"></td>
+            </tr>
+            <tr>
+                <td>Ch 19 Inheritance and Polymorphism</td>
+                <td><input type="checkbox" id="ch19"></td>
+                <td><input type="text" id="notes19"></td>
+            </tr>
+            <tr>
+                <td>Ch 20,21 Program Analysis</td>
+                <td><input type="checkbox" id="ch20_21"></td>
+                <td><input type="text" id="notes20_21"></td>
+            </tr>
+            <tr>
+                <td>Ch 22 Generics</td>
+                <td><input type="checkbox" id="ch22"></td>
+                <td><input type="text" id="notes22"></td>
+            </tr>
+            <tr>
+                <td>Ch 24 Declarative Programming</td>
+                <td><input type="checkbox" id="ch24"></td>
+                <td><input type="text" id="notes24"></td>
+            </tr>
+            <tr>
+                <td>Ch 25 Constraints</td>
+                <td><input type="checkbox" id="ch25"></td>
+                <td><input type="text" id="notes25"></td>
+            </tr>
+            <tr>
+                <td>Ch 27 Metaprogramming - Macros, Code Generation, and Templates</td>
+                <td><input type="checkbox" id="ch27"></td>
+                <td><input type="text" id="notes27"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        // Save checkbox states to localStorage
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            // Load saved state
+            checkbox.checked = localStorage.getItem(checkbox.id) === 'true';
+            
+            // Save state on change
+            checkbox.addEventListener('change', () => {
+                localStorage.setItem(checkbox.id, checkbox.checked);
+            });
+        });
+
+        // Save notes to localStorage
+        document.querySelectorAll('input[type="text"]').forEach(input => {
+            // Load saved notes
+            input.value = localStorage.getItem(input.id) || '';
+            
+            // Save notes on input
+            input.addEventListener('input', () => {
+                localStorage.setItem(input.id, input.value);
+            });
+        });
+    </script>
+</body>
+</html>
