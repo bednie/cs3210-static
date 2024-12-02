@@ -68,3 +68,14 @@ tr:last-child td {
 tr:hover {
     background-color: #f8f9fa;
 }
+
+.flag {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Make the flag column narrower */
+th:first-child,
+td:first-child {
+    width: 60px;
+}
