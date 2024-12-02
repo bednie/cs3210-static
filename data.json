@@ -2,26 +2,31 @@
     {
         "name": "New York City",
         "state": "New York",
-        "country": "United States"
+        "country": "United States",
+        "flag": "🇺🇸"
     },
     {
         "name": "Toronto",
         "state": "Ontario",
-        "country": "Canada"
+        "country": "Canada",
+        "flag": "🇨🇦"
     },
     {
         "name": "Mexico City",
         "state": "CDMX",
-        "country": "Mexico"
+        "country": "Mexico",
+        "flag": "🇲🇽"
     },
     {
         "name": "London",
         "state": "England",
-        "country": "United Kingdom"
+        "country": "United Kingdom",
+        "flag": "🇬🇧"
     },
     {
         "name": "Tokyo",
         "state": "Tokyo Prefecture",
-        "country": "Japan"
+        "country": "Japan",
+        "flag": "🇯🇵"
     }
 ]
