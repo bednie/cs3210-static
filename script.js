@@ -5,7 +5,7 @@ const template = `
             <tr>
                 <th>City</th>
                 <th>State/Region</th>
-                <th colspan="2">Country</th>
+                <th>Country</th>
             </tr>
         </thead>
         <tbody>
@@ -13,8 +13,7 @@ const template = `
             <tr>
                 <td>{{name}}</td>
                 <td>{{state}}</td>
-                <td>{{country}}</td>
-                <td class="flag">{{flag}}</td>
+                <td>{{flag}} {{country}}</td>
             </tr>
             {{/data}}
         </tbody>
