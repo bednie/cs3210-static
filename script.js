@@ -2,7 +2,7 @@
 const template = `
     <ul>
         {{#data}}
-        <li>Name: {{name}}, Age: {{age}}, City: {{city}}</li>
+        <li>City: {{name}}, State/Region: {{state}}, Country: {{country}}</li>
         {{/data}}
     </ul>
 `;
