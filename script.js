@@ -1,4 +1,3 @@
-// First template for static data
 const staticData = {
     title: "Welcome to CS3210 Template Engine Lab",
     content: "This is a simple template engine demonstration.",
@@ -13,11 +12,35 @@ function renderTemplate(template, data) {
     return template;
 }
 
-const staticTemplate = `
+const combinedTemplate = `
     <h3>{{title}}</h3>
     <p>{{content}}</p>
     <p>Author: {{author}}</p>
+    <div id="jsonData">
+        <ul>
+            {{#people}}
+            <li>Name: {{name}}, Age: {{age}}, City: {{city}}</li>
+            {{/people}}
+        </ul>
+    </div>
 `;
 
 const app = document.getElementById('app');
-app.innerHTML = renderTemplate(staticTemplate, staticData);
+
+// First render the static data
+app.innerHTML = renderTemplate(combinedTemplate, staticData);
+
+// Then fetch and render the JSON data
+fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+        const jsonContainer = document.getElementById('jsonData');
+        jsonContainer.innerHTML = Mustache.render(`
+            <ul>
+                {{#data}}
+                <li>Name: {{name}}, Age: {{age}}, City: {{city}}</li>
+                {{/data}}
+            </ul>
+        `, { data: data });
+    })
+    .catch(error => console.error('Error:', error));
